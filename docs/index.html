@@ -2,7 +2,7 @@
     Name: Kevin Dang
     Class: Webdev CPSC 332
     Assignment: HW3 - CSS
-    Last Modified: 9-30-2022
+    Last Modified: 10-03-2022
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homework 3 CPSC 332</title>
 
-        <link rel="icon" href="./images/gonzaga-logo.png">
+        <link rel="icon" href="./images/logos/gonzaga-logo.png">
+        <link rel="stylesheet" href="./style.css">
 
         <style>
             main, header {
@@ -20,34 +21,229 @@
                 justify-content: center;
             }
             main {
-                height: 100px;
+                height: 2250px;
             }
             nav {
+                display: flex;
+                justify-content: center;
                 background-color: gray;
                 flex: 0 1 100%;
-                text-align: center;
-                height: 50px;
+                height: 120px;
+            }
+            nav a {
+                padding-top: 40px;
+            }
+            nav img {
+                width: 150px;
+            }
+            table {
+                margin: auto;
+                padding: 10px;
+            }
+            tr:nth-child(even) {
+                background-color: #D6EEEE;
             }
             .profile {
-                background-color: green;
-                flex: 0 1 20%;
+                background-color: lightgreen;
+                color: black;
+                padding: 15px;
+                flex: 0 1 25%;
             }
             .relev-info {
-                background-color: azure;
+                background-color: lightblue;
+                padding: 15px;
                 flex: 0 1 80%
+            }
+            .nav-flex {
+                display: flex;
+                justify-content: center;
+                grid-gap: 50px;
+                padding: 5px;
+
+                font-size: xx-large;
+            }
+            .career {
+                display: flex;
+                justify-content: center;
+            }
+            .career td {
+                text-align: end;
+                padding-right: 35px;
+            }
+            .career img {
+                width: 200px;
+            }
+            .education img {
+                width: 150px;
+            }
+            .education td {
+                text-align: end;
+                padding-right: 35px;
+            }
+            .hobbies img {
+                width: 100px;
+                border: 2px ridge black;
+            }
+            #profile-image {
+                width: 250px; 
+                border-width: 4px; 
+                border-style: solid; 
+                border-radius: 50%;
+            }
+            h3 {
+                text-align: center;
+            }
+            #name-style {
+                font-size: 35px; 
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <header>
-            <nav>Navbar</nav>
+            <nav>
+                <div class="nav-flex">
+                    <!-- Fragments to other pages -->
+                    <img src="./images/logos/gonzaga-logo.png" alt="Gonzaga logo">
+                    <a href="./index.html#profile-title">Introduction</a>
+                    <a href="./index.html#career-link">Career Summary</a>
+                    <a href="./index.html#education-link">Education and Qualifications</a>
+                    <a href="./index.html#hobbies-link">Interests and Hobbies</a>
+                </div>
+            </nav>
         </header>
         <main>
-            <div class="profile">Profile</div>
-            <div class="relev-info">Relevant Info</div>
+            <div class="profile">
+                <!-- Left side of the page / Introduction -->
+                <div id="profile-title">
+                    <img src="./images/profile_photo.jpg" id="profile-image" alt="kevin dang's profile photo - Yikes!">
+                    <h2 id="name-style">Kevin Dang</h2>
+                </div>
+                <h3>Profession: Gonzaga Student/Researcher</h3>
+            </div>
+            <div class="relev-info">
+                <h2>Summary</h2>
+                <p>
+                    I am an aspiring Computer Science student who is willing to learn more about the 
+                    field of software development and cybersecurity. I was apart of a team that won 1st place in lower division at the <a href="https://spokanectf.github.io/about.html#myTopnav" target="_blank">Mayor's Cup</a> in Spokane on February 5th, 2022.
+                    I am currently on a research project using the <a href="https://www.microsoft.com/en-us/hololens#primaryR3" target="_blank">Hololens 2</a> to aid in the production of an application to help people avoid tripping hazards.
+                </p>
+                <div class="list_container">
+                    <ul>
+                        <!-- Core Skills here -->
+                        <li>
+                            I have experience with the following programming languages:
+                            <ul>
+                                <li>C-Based Languages: C, C++, Java, and C#</li>
+                                <li>General Purpose/Scripting Languages: Python, JavaScript, Powershell</li>
+                                <li>Query Languages: MySQL, MariaDB, MongoDB(NoSQL)</li>
+                                <li>Markup Languages: HTML, CSS, Bootstrap, React</li>
+                            </ul>
+                        </li>
+                        <li>I have experience with version control using Github</li>
+                        <li>I can speak English and partial Spanish</li>
+                    </ul>
+                </div>
+                <h2 id="career-link">Career Summary</h2>
+                <div class="career">
+                    <table>
+                        <caption><strong>Work Experience</strong></caption>
+                        <tr>
+                            <td><a href="https://www.nordstrom.com/" target="_blank">Nordstrom</a></td>
+                            <td>Customer Service</td>
+                            <td>June 2022 - August 2022</td>
+                            <td>Mission Viejo, CA</td>
+                            <td><img src="./images/logos/nordstrom_logo.jpg" alt="Nordstrom Logo"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.islandsrestaurants.com/" target="_blank">Islands: Fine Burgers & Drinks</a></td>
+                            <td>Host, Busser</td>
+                            <td>May 2022 - June 2022</td>
+                            <td>Carlsbad, CA</td>
+                            <td><img src="./images/logos/islands_logo.jpg" alt="Islands Logo"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.hilton.com/en/hotels/sanmbgv-hilton-grand-vacations-club-marbrisa-carlsbad/" target="_blank">Hilton Grand Vacations at MarBrisa</a></td>
+                            <td>House Attendant</td>
+                            <td>May 2021 - July 2021</td>
+                            <td>Carlsbad, CA</td>
+                            <td><img src="./images/logos/hilton_logo.png" alt="Hilton Grand Logo"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://reataglen.com/" target="_blank">Reata Glen</a></td>
+                            <td>Server, Runner, Busser</td>
+                            <td>October 2019 - July 2020</td>
+                            <td>Rancho Mission Viejo, CA</td>
+                            <td><img src="./images/logos/reata_logo.png" alt="Reata Glen Logo"></td>
+                        </tr>
+                    </table>
+                </div>
+                <h2 id="education-link">Education and Qualifications</h2>
+                <div class="education">
+                    <table>
+                        <caption><strong>Education</strong></caption>
+                        <tr>
+                            <td>Primary Education:</td>
+                            <td><a href="https://www.oside.us/ivey" target="_blank">Ivey Ranch Elementary School</a></td>
+                            <td>Oceanside, CA</td>
+                            <td><img src="./images/logos/iveyranch_logo.jpg" alt="Ivey Ranch Logo"></td>
+                        </tr>
+                        <tr>
+                            <td>Secondary Education:</td>
+                            <td><a href="https://www.jserra.org/" target="_blank">JSerra Catholic High School</a></td>
+                            <td>San Juan Capistrano, CA</td>
+                            <td><img src="./images/logos/jserra-logo.png" alt="JSerra Logo"></td>
+                        </tr>
+                        <tr>
+                            <td>College Education:</td>
+                            <td><a href="https://www.gonzaga.edu/" target="_blank">Gonzaga University</a></td>
+                            <td>Spokane, WA</td>
+                            <td><img src="./images/logos/gu_logo.png" alt="Gonzaga Logo"></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <caption><strong>Qualifications</strong></caption>
+                        <tr>
+                            <td>Licensed Food Handler</td>
+                            <td>I am licensed by the food handling board to work around food</td>
+                            <td><img src="./images/logos/food_handlers.png" alt="Food Handlers Card Sample"></td>
+                        </tr>
+                        <tr>
+                            <td>Drivers License</td>
+                            <td>I am licensed to drive a car in California</td>
+                            <td><img src="./images/logos/cali_license.jpg" alt="Drivers License Sample"></td>
+                        </tr>
+                    </table>
+                </div>
+                <h2 id="hobbies-link">Interests and Hobbies</h2>
+                <div class="hobbies">
+                    <p>
+                        My current hobbies are just playing videogames, playing some music, and coding
+                    </p>
+                    <div class="list_container">
+                        <ol>
+                            <li>
+                                Videogames:
+                                <ul>
+                                    <li>RuneScape <a href="https://www.oldschool.runescape.com/" target="_blank"><img src="./images/logos/osrs_logo.webp" alt="Runescape Logo"></a></li>
+                                    <li>NorthGuard <a href="https://store.steampowered.com/app/466560/Northgard/" target="_blank"><img src="./images/logos/northgard_logo.webp" alt="Northgard Logo"></a></li>
+                                    <li>Roblox <a href="https://www.roblox.com/" target="_blank"><img src="./images/logos/roblox_logo_old.png" alt="Roblox Logo"></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                Music Instruments I Play:
+                                <ul>
+                                    <li>The Piano <a href="https://en.wikipedia.org/wiki/Piano" target="_blank"><img src="./images/logos/piano.png" alt=""></a></li>
+                                    <li>The Violin <a href="https://en.wikipedia.org/wiki/Violin" target="_blank"><img src="./images/logos/violin.png" alt=""></a></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
-
+            
         </footer>
     </body>
 </html>
